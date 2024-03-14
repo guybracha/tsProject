@@ -29,7 +29,7 @@ for(let i = 0; i < meetings.length; i++){
         <h3>Meeting: ${current.title}</h3>
         <h3>Details: ${current.text}</h3>
         <button type="button" onClick="notify('${current.title}','${current.date}','${current.hour}','${current.location}')" class="btn btn-success">Alert</button>
-        <button type="button" data-id="${current.getId}" class="btn btn-danger remove-meeting-button" onclick="removeObjectById(sports, ${current.getId})">Remove</button>
+        <button type="button" data-id="${current.getId}" class="btn btn-danger remove-meeting-button" onclick="removeObjectById(meetings, ${current.getId})">Remove</button>
         </div>
         </div>
         </div>
@@ -56,7 +56,7 @@ for(let i = 0; i < tasks.length; i++){
         <h3>Details: ${current.text}</h3>
         <h3>Written at: ${current.writingDate}</h3>
         <button type="button" onClick="deadline('${current.lastDate}','${current.writingDate}')" class="btn btn-success">Alert</button>
-        <button type="button" data-id="${current.getId}" class="btn btn-danger remove-meeting-button" onclick="removeObjectById(sports, ${current.getId})">Remove</button>
+        <button type="button" data-id="${current.getId}" class="btn btn-danger remove-meeting-button" onclick="removeObjectById(tasks, ${current.getId})">Remove</button>
         </div>
     </div>
     </div>

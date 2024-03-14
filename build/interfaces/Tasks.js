@@ -15,6 +15,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 function deadline(lastDate, writingDate) {
     alert("This task was written at ".concat(writingDate, " and it's deadline setting at ").concat(lastDate));
+    console.log("This task was written at ".concat(writingDate, " and it's deadline setting at ").concat(lastDate));
 }
 var Tasks = /** @class */ (function (_super) {
     __extends(Tasks, _super);

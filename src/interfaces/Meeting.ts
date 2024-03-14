@@ -6,6 +6,7 @@ interface Meeting extends Note{
 
 function notify(title : string, date: string, hour: string, location : string): void{
     alert(`Your Meeting with ${title} is on ${date} at ${hour} in ${location}`);
+    console.log(`Your Meeting with ${title} is on ${date} at ${hour} in ${location}`);
 }
 
 class Meeting extends Note implements Meeting{

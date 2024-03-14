@@ -15,7 +15,7 @@ var Note = /** @class */ (function () {
     });
     Note.prototype.deleteNote = function () {
         console.log("Note was successfully deleted");
-        Note.currentId--;
+        // No need to decrement Note.currentId here as it's a static property
     };
     Note.getNextId = function () {
         return Note.currentId++;

@@ -15,6 +15,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 function notify(title, date, hour, location) {
     alert("Your Meeting with ".concat(title, " is on ").concat(date, " at ").concat(hour, " in ").concat(location));
+    console.log("Your Meeting with ".concat(title, " is on ").concat(date, " at ").concat(hour, " in ").concat(location));
 }
 var Meeting = /** @class */ (function (_super) {
     __extends(Meeting, _super);

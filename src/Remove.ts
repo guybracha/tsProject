@@ -1,4 +1,4 @@
-function removeObjectById<T extends { getId(): number }>(objects: T[] | undefined, id: number): void {
+function removeObjectById<T extends { getId(): number; deleteNote?(): void }>(objects: T[] | undefined, id: number): void {
     if (!Array.isArray(objects)) {
         console.error("Invalid input: 'objects' must be an array.");
         return;
@@ -8,6 +8,9 @@ function removeObjectById<T extends { getId(): number }>(objects: T[] | undefine
         const element = document.getElementById(`${objects[index].constructor.name.toLowerCase()}-${id}`);
         if (element) {
             element.remove();
+        }
+        if (objects[index].deleteNote) {
+            objects[index].deleteNote();
         }
         objects.splice(index, 1);
     } else {

@@ -9,6 +9,9 @@ function removeObjectById(objects, id) {
         if (element) {
             element.remove();
         }
+        if (objects[index].deleteNote) {
+            objects[index].deleteNote();
+        }
         objects.splice(index, 1);
     }
     else {

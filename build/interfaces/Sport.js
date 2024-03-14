@@ -15,6 +15,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 function training(title, hour) {
     alert("your training of ".concat(title, " is coming at ").concat(hour));
+    console.log("your training of ".concat(title, " is coming at ").concat(hour));
 }
 var Sport = /** @class */ (function (_super) {
     __extends(Sport, _super);

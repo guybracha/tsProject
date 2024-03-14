@@ -4,6 +4,7 @@ interface Tasks extends Note{
 
 function deadline(lastDate : string, writingDate: string): void{
     alert(`This task was written at ${writingDate} and it's deadline setting at ${lastDate}`);
+    console.log(`This task was written at ${writingDate} and it's deadline setting at ${lastDate}`);
 }
 
 class Tasks extends Note implements Tasks{

@@ -6,6 +6,7 @@ interface Sport extends Note{
 }
 function training(title: string, hour: string): void{
     alert(`your training of ${title} is coming at ${hour}`);
+    console.log(`your training of ${title} is coming at ${hour}`);
 }
 
 class Sport extends Note implements Sport{
