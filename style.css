@@ -1,0 +1,21 @@
+.custom-img{
+    height: 150px;
+    width: auto;
+}
+.container-body{
+    background-color: rgb(143, 143, 255);
+    border: red solid 3px;
+}
+footer{
+    text-align: center;
+    font-size: 20px;
+}
+
+.meeting-block col-md-8{
+    background-color: white;
+    border: gold 2px solid;
+}
+
+.meeting-block img{
+    border: 3px white dotted;
+}
