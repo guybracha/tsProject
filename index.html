@@ -8,6 +8,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script defer src='build/Main.js'></script>
     <script src="build/Note.js"></script>
+    <script src="build/AddNew.js"></script>
     <script src="build/Remove.js"></script>
     <script src="build/interfaces/Meeting.js"></script>
     <script src="build/interfaces/Sport.js"></script>
@@ -29,33 +30,34 @@
                             <input type="text" class="form-control" id="title" placeholder="Enter Task Name">
                         </div>
                         <div class="form-group">
-                            <label for="title">Task Date</label>
+                            <label for="date">Task Date</label>
                             <input type="text" class="form-control" id="date" placeholder="Enter Date">
                         </div>
                         <div class="form-group">
-                            <label for="title">Task Time</label>
+                            <label for="time">Task Time</label>
                             <input type="text" class="form-control" id="time" placeholder="Enter Task Time">
                         </div>
                         <div class="form-group">
-                            <label for="title">Task Details</label>
+                            <label for="details">Task Details</label>
                             <input type="text" class="form-control" id="details" placeholder="Enter Task Details">
                         </div>
                         <div class="form-group">
-                            <label for="title">Img Description</label>
+                            <label for="img">Img Description</label>
                             <input type="text" class="form-control" id="img" placeholder="Enter img Url">
                         </div>
                         <div class="form-group">
-                            <label for="title">Select Task Type</label>
-                            <select class="form-select">
+                            <label for="type">Select Task Type</label>
+                            <select class="form-select" id="type"> <!-- Added id attribute here -->
                                 <option selected>Open this select menu</option>
-                                <option value="1">Meeting</option>
-                                <option value="2">Task</option>
-                                <option value="3">Sport</option>
+                                <option value="meeting">Meeting</option>
+                                <option value="task">Task</option>
+                                <option value="sport">Sport</option>
                             </select>
                         </div>
+                        <div id="additionalFields"></div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
-                </div>
+                </div>                
             </div>
         </div>
         <h2 style="text-decoration: underline;" class="display-5">Meetings</h2>
