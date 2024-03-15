@@ -18,8 +18,7 @@ abstract class Note {
     }
 
     public deleteNote(): void {
-        console.log("Note was successfully deleted");
-        // No need to decrement Note.currentId here as it's a static property
+        alert("Note was successfully deleted");
     }
 
     private static currentId: number = 1;
