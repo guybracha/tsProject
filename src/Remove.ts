@@ -1,9 +1,9 @@
-function removeObjectById<Note extends { getId(): number; deleteNote?(): void }>(
+function removeObjectById<Note extends { getId: number; deleteNote?(): void }>(
     objects: Note[], 
     id: number, 
     refreshView: () => void 
 ): void {
-    const index = objects.findIndex(obj => obj.getId() === id);
+    const index = objects.findIndex(obj => obj.getId === id);
     if (index !== -1) {
         const objectToRemove = objects[index];
         if (objectToRemove.deleteNote) {
@@ -11,6 +11,12 @@ function removeObjectById<Note extends { getId(): number; deleteNote?(): void }>
         }
         objects.splice(index, 1);
         refreshView(); 
+
+        // Remove the corresponding HTML element
+        const elementToRemove = document.getElementById(`element-${id}`);
+        if (elementToRemove) {
+            elementToRemove.remove();
+        }
     } else {
         console.error(`Object with id ${id} not found.`);
     }

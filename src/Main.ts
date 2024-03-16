@@ -17,7 +17,7 @@ let meetingHtml = '<div class="row">'
 for(let i = 0; i < meetings.length; i++){
     const current = meetings[i];
     console.log(`${meetings[i].getId} - ${meetings[i].title}`);
-    meetingHtml += `<div class="col-md-6">
+    meetingHtml += `<div id="element-${current.getId}" div class="col-md-6">
         <div class="meeting-block row">
         <h2>${current.getId}</h2>
         <div class="col-md-4">
@@ -44,7 +44,7 @@ let taskHtml = '<div class="row">'
 for(let i = 0; i < tasks.length; i++){
     console.log(`${tasks[i].getId} - ${tasks[i].title}`);
     const current = tasks[i];
-    taskHtml += `<div class="col-md-6">
+    taskHtml += `<div id="element-${current.getId}" div class="col-md-6">
     <div class="meeting-block row">
     <h2>${current.getId}</h2>
     <div class="col-md-4">
@@ -70,8 +70,7 @@ let sportHtml = '<div class="row">'
 for(let i = 0; i < sports.length; i++){
     console.log(`${sports[i].getId} - ${sports[i].title}`);
     const current = sports[i];
-    sportHtml += `
-    <div class="col-md-6">
+    sportHtml += `<div id="element-${current.getId}" class="col-md-6">
     <div class="meeting-block row">
     <h2>${current.getId}</h2>
     <div class="col-md-4">

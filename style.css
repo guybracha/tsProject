@@ -3,7 +3,7 @@
     width: auto;
 }
 .container-body{
-    background-color: rgb(143, 143, 255);
+    background-color: rgba(58, 58, 233, 0.499);
     border: red solid 3px;
 }
 footer{
