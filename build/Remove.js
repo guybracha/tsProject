@@ -1,5 +1,4 @@
-function removeObjectById(objects, id, refreshView // Add refreshView as a parameter
-) {
+function removeObjectById(objects, id, refreshView) {
     var index = objects.findIndex(function (obj) { return obj.getId() === id; });
     if (index !== -1) {
         var objectToRemove = objects[index];
@@ -7,7 +6,7 @@ function removeObjectById(objects, id, refreshView // Add refreshView as a param
             objectToRemove.deleteNote();
         }
         objects.splice(index, 1);
-        refreshView(); // Refresh the view after removing the object
+        refreshView();
     }
     else {
         console.error("Object with id ".concat(id, " not found."));

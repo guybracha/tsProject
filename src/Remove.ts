@@ -1,7 +1,7 @@
 function removeObjectById<Note extends { getId(): number; deleteNote?(): void }>(
     objects: Note[], 
     id: number, 
-    refreshView: () => void // Add refreshView as a parameter
+    refreshView: () => void 
 ): void {
     const index = objects.findIndex(obj => obj.getId() === id);
     if (index !== -1) {
@@ -10,7 +10,7 @@ function removeObjectById<Note extends { getId(): number; deleteNote?(): void }>
             objectToRemove.deleteNote();
         }
         objects.splice(index, 1);
-        refreshView(); // Refresh the view after removing the object
+        refreshView(); 
     } else {
         console.error(`Object with id ${id} not found.`);
     }
