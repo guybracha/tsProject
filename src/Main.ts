@@ -82,6 +82,7 @@ for(let i = 0; i < sports.length; i++){
         <h3>Task: ${current.title}</h3>
         <h3>Sport kind: ${current.text}</h3>
         <h3>Place at: ${current.location}</h3>
+        <h3>Equipment: ${current.equipment}</h3>
         <button type="button" onClick="training('${current.title}','${current.hour}')" class="btn btn-success">Alert</button>
         <button type="button" data-id="${current.getId}" class="btn btn-danger remove-meeting-button" onclick="removeObjectById(sports, ${current.getId}, refreshView)">Remove</button>
         </div>
